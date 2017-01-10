@@ -10,18 +10,6 @@ export default Ember.Route.extend({
       var newRental = this.store.createRecord('rental', params);
       newRental.save();
       this.transitionTo('index');
-    },
-
-    destroyRental(rental) {
-      rental.destroyRecord();
-      this.transitionTo('index');
     }
   }
-  //   },
-  //   updateRental(rental) {
-  //     this.store.findRecord('rental').then()
-  //     rental.updateRecord();
-  //     this.transitionTo('index');
-  //   }
-  // }
 });
